@@ -56,5 +56,8 @@ void		hud_normal(t_char player);
 void		hud_inventory(t_char player);
 char		*ft_itoa(int nb);
 t_usable	*gen_usable(char *name, int hp, int mp, int price);
+int			display_name(void);
+void		ft_putstr(char *str);
+char		**ft_table(void);
 
 #endif
