@@ -4,6 +4,7 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <time.h>
 
 void	write_msg(char *msg);
 int		ft_strlen(char *str);
@@ -11,6 +12,7 @@ char	*get_input(void);
 int		ft_strcmp(char *s1, char *s2);
 char	*ft_strlowcase(char *str);
 int		check_input(char *str, char **tab, int size);
+int		ft_random(void);
 
 typedef struct		s_char
 {
