@@ -2,14 +2,14 @@
 
 int		main(int argc, char **argv)
 {
-	char	*msg;
-	int		test;
+	t_char	*player;
+	t_usable	*hp_potion;
+	t_usable	*mp_potion;
 
-	write_msg("Hello World !\n");
-	msg = get_input();
-	write_msg(msg);
-	write_msg(ft_strlowcase(msg));
-	test = check_input(msg, argv, 3);
-	printf("%d\n", test);
+	player = init_baeth();
+	hp_potion = gen_usable("hp potion", 50, 0, 10);
+	mp_potion = gen_usable("mp potion", 0, 50, 10);
+	player->name = "test";
+	hud_inventory(*player);
 	return (0);
 }
