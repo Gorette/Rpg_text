@@ -7,8 +7,7 @@ int		main(int argc, char **argv)
 	t_usable	**usable_items;
 	t_inv		*inventory;
 
-//	player = choose_character();
-	player = init_baeth("axel");
+	player = choose_character();
 	items = init_items();
 	usable_items = init_usable();
 	inventory = init_inventory(items, usable_items);

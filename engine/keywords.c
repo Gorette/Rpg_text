@@ -17,7 +17,7 @@ void	redirect_main(char *str, t_char *player, t_inv *inventory)
 	if (i == 5)
 		write_msg("Your keyword is invalid.\n");
 	if (i == 0)
-		sys_msg("To progress in the game you will have to type commands. Here are some usefull commands you should use :                 -Inventory                              -story                                  -close");
+		sys_msg("To progress in the game you will have to type commands. Here are some usefull commands you should use :                 -Inventory (opens inventory)            -story (your current quest)             -equip (equip an item)                 -close (closes the game)");
 	if (i == 1)
 		hud_inventory(*player, inventory->backpack, inventory->usable_items, inventory->items);
 	if (i == 2)
