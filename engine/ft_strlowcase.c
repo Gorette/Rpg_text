@@ -11,6 +11,5 @@ char	*ft_strlowcase(char *str)
 			str[i] = str[i] + 32;
 		i++;
 	}
-	str[i] = '\0';
 	return (str);
 }

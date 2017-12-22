@@ -5,16 +5,26 @@ SRCS = engine/*.c	\
 
 SRCO = *.o
 
-all: $(NAME)
+LIB = engine/Libft/libft.a
 
-$(NAME):
-	gcc -c -I./engine/ $(SRCS)
-	gcc -o $(NAME) $(SRCO)
+GREEN = "\033[32m"
+
+WHITE = "\033[00m"
+
+all: $(NAME) clean
+
+$(NAME): $(SRCO)
+	@gcc -o $(NAME) $(SRCO) $(LIB)
+	@echo $(GREEN)"Program Created"$(WHITE)
+
+$(SRCO):
+	@gcc -c -I./engine/ $(SRCS)
+	@echo "Compiling Sources"
 
 clean:
-	rm -rf $(SRCO)
+	@rm -rf $(SRCO)
 
 fclean: clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
 
 re: fclean all

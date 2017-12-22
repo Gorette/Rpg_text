@@ -3,13 +3,17 @@
 int		main(int argc, char **argv)
 {
 	t_char	*player;
-	t_usable	*hp_potion;
-	t_usable	*mp_potion;
+	t_item	**items;
+	t_usable	**usable_items;
+	t_inv		*inventory;
 
-	player = init_baeth();
-	hp_potion = gen_usable("hp potion", 50, 0, 10);
-	mp_potion = gen_usable("mp potion", 0, 50, 10);
-	player->name = "test";
-	hud_inventory(*player);
+//	player = choose_character();
+	player = init_baeth("axel");
+	items = init_items();
+	usable_items = init_usable();
+	inventory = init_inventory(items, usable_items);
+	hud_normal(*player);
+	while (1)
+		redirect_main(get_input(player), player, inventory);
 	return (0);
 }
